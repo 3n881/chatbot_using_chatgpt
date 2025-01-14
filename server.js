@@ -48,8 +48,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Set the server to listen on a port
-const port = process.env.PORT || 3000;  // Use Heroku's dynamic port or fallback to 3000
+const port = process.env.PORT || 10000;  // Use the environment variable PORT if available, otherwise fallback to 10000
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
